@@ -1,0 +1,303 @@
+/* CalendarComponent.css */
+
+/* Calendar container styles */
+.calendar-container {
+    background: #2b2b2b;
+    color: #fff;
+    padding: 2.5rem; /* 40px */
+    border-radius: 0.625rem; /* 10px */
+    width: 37.5rem; /* 600px */
+    margin: 2.5rem auto 3.75rem auto; /* 40px auto 60px auto */
+    text-align: center;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Calendar header styles */
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem; /* 20px */
+    width: 100%;
+  }
+  
+  /* Navigation button styles */
+  .nav-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.875rem; /* 30px */
+    cursor: pointer;
+  }
+  
+  /* Calendar grid styles */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.625rem; /* 10px */
+    margin-top: 1.25rem; /* 20px */
+  }
+  
+  /* Day label styles */
+  .day-label {
+    font-weight: 300;
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  /* Date box styles */
+  .date-box {
+    width: 4.375rem; /* 70px */
+    height: 4.375rem; /* 70px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3125rem; /* 5px */
+    background: #dddddd;
+    color: #8a5a63;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Available date box hover and selected styles */
+  .available:hover {
+    background: rgba(144, 75, 89, 0.585);
+    cursor: pointer;
+    box-shadow: 0 0 0.625rem rgba(145, 15, 41, 0.2); /* 10px */
+  }
+  
+  .available.selected {
+    background: rgba(144, 75, 89, 0.585);
+  }
+  
+  /* Unavailable date box styles */
+  .unavailable {
+    background: #a2a2a2 !important;
+    color: #474747 !important;
+  }
+  
+  /* Weekend number styles */
+  .weekend-number {
+    color: #474747;
+  }
+  
+  /* Weekday number styles */
+  .weekday-number {
+    color: #910f29;
+  }
+  
+  /* Empty date box styles */
+  .empty {
+    background: #2b2b2b;
+  }
+  
+  /* TimeSlot styles */
+  .time-slot-container {
+    margin-top: 2.5rem; /* 40px */
+    padding: 1.25rem; /* 20px */
+    border-radius: 0.625rem; /* 10px */
+    transition: background 0.3s;
+    text-align: center;
+    position: relative;
+  }
+  
+  .title-svg {
+    position: absolute;
+    top: -2.5rem; /* -40px */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1.25rem; /* 20px */
+  }
+  
+  /* Time slot grid styles */
+  .time-slot-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem; /* 20px */
+    margin-top: 0.625rem; /* 10px */
+    margin-bottom: 2.5rem; /* 40px */
+  }
+  
+  /* Time slot box styles */
+  .time-slot-box {
+    width: 6.25rem; /* 100px */
+    height: 2.5rem; /* 40px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3125rem; /* 5px */
+    background: #dddddd;
+    color: #8a5a63;
+    font-size: 1rem; /* 16px */
+    transition: background 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 0.125rem 0.25rem */
+  }
+  
+  .time-slot-box:hover {
+    background: rgba(144, 75, 89, 0.585);
+    box-shadow: 0 0 0.625rem rgba(145, 15, 41, 0.2); /* 10px */
+  }
+  
+  .time-slot-box.selected {
+    background: rgba(144, 75, 89, 0.585);
+  }
+  
+  .time-slot-box.unavailable {
+    background: #a2a2a2;
+    color: #474747;
+    pointer-events: none;
+  }
+  
+  /* Booking container styles */
+  .booking-container {
+    margin-top: 2.5rem; /* 40px */
+    padding: 1.25rem; /* 20px */
+    border-radius: 0.625rem; /* 10px */
+    transition: background 0.3s;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 37.5rem; /* 600px */
+    margin: auto;
+  }
+  
+  /* Booking form styles */
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem; /* 30px */
+  }
+  
+  /* Form group styles */
+  .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Form label styles */
+  .form-label {
+    position: absolute;
+    left: 0.625rem; /* 10px */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  
+  /* Form input styles */
+  .form-input {
+    width: 100%;
+    padding: 0.625rem; /* 10px */
+    padding-left: 2.5rem; /* 40px */
+    border-radius: 0.3125rem; /* 5px */
+    border: 0.0625rem solid #ddd; /* 1px */
+    background: #dddddd;
+    color: #8a5a63;
+    font-size: 1rem; /* 16px */
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 0.125rem 0.25rem */
+  }
+  
+  .form-input:focus {
+    outline: none;
+    background: #dddddd;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); /* 0.125rem 0.25rem */
+  }
+  
+  .form-input:not(:placeholder-shown) + .form-label,
+  .form-input:focus + .form-label {
+    opacity: 0;
+  }
+  
+  /* Hidden class styles */
+  .hidden {
+    opacity: 0;
+  }
+  
+  /* Submit button styles */
+  .submit-button {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 12.5rem; /* 200px */
+    height: 3.125rem; /* 50px */
+    padding: 0;
+  }
+  
+  .button-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    .calendar-container {
+      display: none; /* Hide the calendar on small screens */
+    }
+  
+    .booking-container {
+      width: 100%;
+      padding: 0.625rem; /* 10px */
+    }
+  
+    .form-input {
+      font-size: 0.875rem; /* 14px */
+    }
+  
+    .submit-button {
+      width: 11.25rem; /* 180px */
+      height: 2.8125rem; /* 45px */
+    }
+  
+    .button-text {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .booking-container {
+      width: 100%;
+      padding: 0.3125rem; /* 5px */
+    }
+  
+    .form-input {
+      font-size: 0.75rem; /* 12px */
+    }
+  
+    .highlight .form-input {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+    
+    .submit-button {
+      width: 9.375rem; /* 150px */
+      height: 2.5rem; /* 40px */
+    }
+  
+    .button-text {
+      width: 80%;
+    }
+  }
+  
+  .thank-you-message {
+    margin-top: 1.25rem; /* 20px */
+    text-align: center;
+  }
+  

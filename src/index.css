@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for dark and light backgrounds */
+.bg-darkBg {
+  background-color: #2B2B2B;
+}
+
+.bg-lightBg {
+  background-color: #DDDDDD;
+}
+
+.text-darkText {
+  color: #DDDDDD;
+}
+
+.text-lightText {
+  color: #910F29;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.om-os-title {
+  width: 50%; 
+  max-width: 20rem;
+}
+
+.om-os-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 480px) {
+  .om-os-text {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .om-os-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .om-os-text {
+    font-size: 1.75rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .text-logo {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .text-logo {
+    display: block;
+  }
+}
+
+.spaced-element {
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Responsive adjustments for the calendar component and CallMeForm */
+@media (min-width: 769px) {
+  .calendar-container {
+    display: block;
+  }
+
+  .call-me-form-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    display: none;
+  }
+
+  .call-me-form-container {
+    display: block;
+  }
+}
