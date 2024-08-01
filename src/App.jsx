@@ -9,10 +9,6 @@ import ServicesSection from './components/ServicesSection.jsx';
 import CalendarComponent from './components/CalendarComponent';
 import TimeSlot from './components/TimeSlot';
 import Booking from './components/Booking';
-import omOsTitleLight from './assets/Om Ostitle1.svg';
-import omOsTitleDark from './assets/Om Ostitle.svg';
-import omOsTextLight from './assets/omostextlight.svg';
-import omOsTextDark from './assets/omostextdark.svg';
 import kontaktTitleLight from './assets/Kontakttitlelight.svg';
 import kontaktTitleDark from './assets/Kontakttitledark.svg';
 import bookEnModeLight from './assets/Book en møde.svg';
@@ -25,6 +21,7 @@ import { auth } from './firebase';
 import Admin from './components/Admin';
 import PrivateRoute from './components/PrivateRoute';
 import Login from './components/Login';
+import OmOsSection from './components/OmOsSection'; // Import the new component
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -84,11 +81,7 @@ const App = () => {
               <LinkSection darkMode={darkMode} />
             </div>
 
-            <div id="om-os-section" className="flex flex-col justify-center items-center min-h-screen w-full px-4 py-8 text-center sm:px-8 md:px-12 lg:px-16">
-              <img src={darkMode ? omOsTitleLight : omOsTitleDark} alt="Om Os Title" className="om-os-title mx-auto mb-8" />
-
-              <img src={darkMode ? omOsTextDark : omOsTextLight} alt="Om Os Text" className="mx-auto mb-4 w-4/5 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg" />
-            </div>
+            <OmOsSection darkMode={darkMode} /> {/* Use the new component */}
 
             <ServicesSection darkMode={darkMode} />
 
